@@ -13,3 +13,8 @@ function getComputerChoice() {
     }
 }
 console.log(computerChoice());
+let playerChoice = prompt("what are you picking?",)
+function getPlayerChoice() {
+    return playerChoice
+}
+console.log(getPlayerChoice());
