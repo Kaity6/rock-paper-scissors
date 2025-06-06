@@ -15,22 +15,41 @@ let playerChoice = prompt("what are you picking?",)
         return playerChoice.toLowerCase();
 }
 
-function playRound(humanSelection,computerSelection) {
-        if (humanSelection == computerSelection) {
-            console.log(`It's a draw, both of you picked ${humanSelection}`)
-        }
-        else if (humanSelection == "rock" && computerSelection == "scissors" || humanSelection == "paper" && computerSelection == "rock" || humanSelection == "scissors" && computerSelection == "paper") {
-            console.log(`You won! ${humanSelection} beats ${computerSelection}.`)
-            humanScore ++
-        }
-        else {
-            console.log(`You lost! ${computerSelection} beats ${humanSelection}, skill issue tbh.`)
-            computerScore ++
-        }
+
+function assignSelections () {
+    let humanSelection = getPlayerChoice(), computerSelection = getComputerChoice();
+    console.log(humanSelection)
+    console.log(computerSelection)
 }
-let humanScore = 0, computerScore = 0;
-let humanSelection = getPlayerChoice(), computerSelection = getComputerChoice();
-console.log(humanSelection);
-console.log(computerSelection);
-playRound(humanSelection,computerSelection);
+function playRound () {
+    assignSelections();
+    winningLogic();
+}
+
+function playGame () {
+    let humanScore = 0, computerScore = 0;
+
+
+        function winningLogic(humanSelection,computerSelection) {
+                if (humanSelection == computerSelection) {
+                    console.log(`It's a draw, both of you picked ${humanSelection}`)
+                }
+                else if (humanSelection == "rock" && computerSelection == "scissors" || humanSelection == "paper" && computerSelection == "rock" || humanSelection == "scissors" && computerSelection == "paper") {
+                    console.log(`You won! ${humanSelection} beats ${computerSelection}.`)
+                    humanScore ++
+                }
+                else {
+                    console.log(`You lost! ${computerSelection} beats ${humanSelection}, skill issue tbh.`)
+                    computerScore ++
+                }
+        }
+        playRound(humanSelection,computerSelection);
+        playRound(humanSelection,computerSelection);
+        playRound(humanSelection,computerSelection);
+        playRound(humanSelection,computerSelection);
+        playRound(humanSelection,computerSelection);
+}
+playGame()
+
+
 
