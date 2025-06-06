@@ -1,20 +1,35 @@
-
-let computerChoice = 
 function getComputerChoice() {
-    let computerRandom = Math.random();
-    if (computerRandom >= 0 && computerRandom< 0.33) {
-        return computerChoice = "rock";
+    if (Math.random() >= 0 && Math.random() < 0.33) {
+        return "rock";
     }
-    else if (computerRandom >= 0.33 && computerRandom <0.66) {
-        return computerChoice = "paper";
+    else if (Math.random() >= 0.33 && Math.random() < 0.66) {
+        return "paper";
     }
     else {
-        return computerChoice = "scissors";
+        return "scissors";
     }
 }
-console.log(computerChoice());
+console.log(getComputerChoice());
+
 let playerChoice = prompt("what are you picking?",)
-function getPlayerChoice() {
-    return playerChoice
+    function getPlayerChoice() {
+        return playerChoice.toLowerCase();
 }
 console.log(getPlayerChoice());
+
+let humanScore = 0, computerScore = 0;
+
+function playRound(humanSelection,computerSelection) {
+    let humanSelection = getPlayerChoice();
+    let computerSelection = getComputerChoice();
+        if (humanSelection == computerSelection) {
+            console.log(`It's a draw, both of you picked ${humanSelection}`)
+        }
+        else {console.log("meow")}
+}
+playRound(humanSelection,computerSelection);
+
+// humanSelection = getPlayerChoice();
+// computerSelection = getComputerChoice();
+// console.log(humanSelection);
+// console.log(computerSelection);
