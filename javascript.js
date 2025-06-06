@@ -14,23 +14,19 @@ let playerChoice = prompt("what are you picking?",)
     function getPlayerChoice() {
         return playerChoice.toLowerCase();
 }
+let humanSelection, computerSelection;
 
+
+let humanScore = 0, computerScore = 0;
+function playRound() {
 
 function assignSelections () {
-    let humanSelection = getPlayerChoice(), computerSelection = getComputerChoice();
-    console.log(humanSelection)
-    console.log(computerSelection)
+    humanSelection = getPlayerChoice();
+    computerSelection = getComputerChoice();
+    console.log(humanSelection);
+    console.log(computerSelection);
 }
-function playRound () {
-    assignSelections();
-    winningLogic();
-}
-
-function playGame () {
-    let humanScore = 0, computerScore = 0;
-
-
-        function winningLogic(humanSelection,computerSelection) {
+                assignSelections();
                 if (humanSelection == computerSelection) {
                     console.log(`It's a draw, both of you picked ${humanSelection}`)
                 }
@@ -43,13 +39,22 @@ function playGame () {
                     computerScore ++
                 }
         }
-        playRound(humanSelection,computerSelection);
-        playRound(humanSelection,computerSelection);
-        playRound(humanSelection,computerSelection);
-        playRound(humanSelection,computerSelection);
-        playRound(humanSelection,computerSelection);
+function playGame() {
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    if (humanScore > computerScore) {
+        console.log(`YOu are the victorious! Humanity is proud of you!`)
+    } 
+    else if (humanScore < computerScore) {
+        console.log(`YOU ARE DEFEATED! THE AI IS TAKING OVER HUMANITY!`)
+    }
+    else {
+        console.log(`No winner,`)
+    }
 }
 playGame()
-
 
 
