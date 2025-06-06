@@ -9,15 +9,11 @@ function getComputerChoice() {
         return "scissors";
     }
 }
-console.log(getComputerChoice());
 
 let playerChoice = prompt("what are you picking?",)
     function getPlayerChoice() {
         return playerChoice.toLowerCase();
 }
-console.log(getPlayerChoice());
-
-let humanScore = 0, computerScore = 0;
 
 function playRound(humanSelection,computerSelection) {
         if (humanSelection == computerSelection) {
@@ -32,8 +28,8 @@ function playRound(humanSelection,computerSelection) {
             computerScore ++
         }
 }
-let humanSelection = getPlayerChoice();
-let computerSelection = getComputerChoice();
+let humanScore = 0, computerScore = 0;
+let humanSelection = getPlayerChoice(), computerSelection = getComputerChoice();
 console.log(humanSelection);
 console.log(computerSelection);
 playRound(humanSelection,computerSelection);
