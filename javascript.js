@@ -1,60 +1,97 @@
-function getComputerChoice() {
-    if (Math.random() >= 0 && Math.random() < 0.33) {
+
+
+
+
+
+
+    function getComputerChoice() {
+        if (Math.random() >= 0 && Math.random() < 0.33) {
         return "rock";
-    }
+        }
     else if (Math.random() >= 0.33 && Math.random() < 0.66) {
         return "paper";
     }
     else {
         return "scissors";
     }
-}
+    }
 
-let playerChoice = prompt("what are you picking?",)
-    function getPlayerChoice() {
-        return playerChoice.toLowerCase();
-}
 let humanSelection, computerSelection;
+let roundResult = document.getElementById("roundResult")
+let showPlayerChoice = document.getElementById("showPlayerChoice")
+let showComputerChoice = document.getElementById("showComputerChoice")
+let playerRock = document.getElementById("playerRock");
+let playerPaper = document.getElementById("playerPaper");
+let playerScissors = document.getElementById("playerScissors");
+let playerScoreDom = document.getElementById("playerScore")
+let computerScoreDom = document.getElementById("computerScore")
+
 
 
 let humanScore = 0, computerScore = 0;
 function playRound() {
 
 function assignSelections () {
-    humanSelection = getPlayerChoice();
+    humanSelection = playerChoice;
     computerSelection = getComputerChoice();
-    console.log(humanSelection);
-    console.log(computerSelection);
+    showPlayerChoice.innerText = `Your Choice: ${humanSelection}`
+    showComputerChoice.innerText = `Computer's Choice: ${computerSelection}`
 }
                 assignSelections();
                 if (humanSelection == computerSelection) {
-                    console.log(`It's a draw, both of you picked ${humanSelection}`)
+                    roundResult.innerText = (`It's a draw, both of you picked ${humanSelection}`)
                 }
                 else if (humanSelection == "rock" && computerSelection == "scissors" || humanSelection == "paper" && computerSelection == "rock" || humanSelection == "scissors" && computerSelection == "paper") {
-                    console.log(`You won! ${humanSelection} beats ${computerSelection}.`)
+                    roundResult.innerText = (`You won! ${humanSelection} beats ${computerSelection}.`)
                     humanScore ++
                 }
                 else {
-                    console.log(`You lost! ${computerSelection} beats ${humanSelection}, skill issue tbh.`)
+                    roundResult.innerText = (`You lost! ${computerSelection} beats ${humanSelection}, skill issue tbh.`)
                     computerScore ++
-                }
-        }
-function playGame() {
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    if (humanScore > computerScore) {
-        console.log(`YOu are the victorious! Humanity is proud of you!`)
-    } 
-    else if (humanScore < computerScore) {
-        console.log(`YOU ARE DEFEATED! THE AI IS TAKING OVER HUMANITY!`)
-    }
-    else {
-        console.log(`No winner,`)
-    }
+                };
+                playerScoreDom.innerText = `Player score: ${humanScore}`;
+                computerScoreDom.innerText = `computer score: ${computerScore}`
+                if (humanScore === 5) {
+                    theEnd.innerText = `You won! Your parents must be Asian!`
+                    humanScore = 0;
+                    computerScore = 0;
+                    } else if (computerScore === 5) {
+                    theEnd.innerText = `This the end! AI is taking over!` 
+                    humanScore = 0;
+                    computerScore = 0;
 }
-playGame()
+
+        }
+
+
+
+playerScoreDom.innerText = `Player score: ${humanScore}`
+computerScoreDom.innerText = `computer score: ${computerScore}`
+
+let theEnd = document.getElementById("theEnd")
+
+
+
+let playerChoice;
+
+playerRock.addEventListener("click", () => {
+playerChoice = "rock"
+playRound()
+})
+
+
+playerPaper.addEventListener("click", () => {
+    playerChoice = "paper"
+    playRound()
+})
+
+
+playerScissors.addEventListener("click", () => {
+playerChoice = "scissors"
+playRound()
+})
+
+
+
 
 
