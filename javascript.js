@@ -1,10 +1,4 @@
-
-
-
-
-
-
-    function getComputerChoice() {
+function getComputerChoice() {
         if (Math.random() >= 0 && Math.random() < 0.33) {
         return "rock";
         }
@@ -59,7 +53,9 @@ function assignSelections () {
                     theEnd.innerText = `This the end! AI is taking over!` 
                     humanScore = 0;
                     computerScore = 0;
-}
+                    } else {
+                    theEnd.innerText = ``
+                    }
 
         }
 

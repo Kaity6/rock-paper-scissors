@@ -1,0 +1,53 @@
+[33mcommit 9bf3eb879a886dc4d6827d2bdc0ec4c443ebd6b1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/rps-ui[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: kaity6 <202271975+Kaity6@users.noreply.github.com>
+Date:   Thu Jul 24 13:22:09 2025 +0000
+
+    the end
+
+[33mcommit 4c702d8ff762ff357155398c221eed8f5256d412[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: kaity6 <202271975+Kaity6@users.noreply.github.com>
+Date:   Fri Jun 6 17:53:36 2025 +0000
+
+    finally done with the project?
+
+[33mcommit f7a5462e08f6638a1cb4c68070ce4a23ca1e1312[m
+Author: kaity6 <202271975+Kaity6@users.noreply.github.com>
+Date:   Fri Jun 6 17:01:28 2025 +0000
+
+    figuring out playGame function
+
+[33mcommit 406a8e56edbbecb5f2a344a5359e17b9e30be2af[m
+Author: kaity6 <202271975+Kaity6@users.noreply.github.com>
+Date:   Fri Jun 6 16:39:43 2025 +0000
+
+    finally done playRound function
+
+[33mcommit 78dcdeb29a7d1c0144217a4f67d40467cde2488b[m
+Author: kaity6 <202271975+Kaity6@users.noreply.github.com>
+Date:   Fri Jun 6 16:36:24 2025 +0000
+
+    finally figured out playROund function
+
+[33mcommit 992e57af545939bb9ae88de36840a5bf2e19c009[m
+Author: kaity6 <202271975+Kaity6@users.noreply.github.com>
+Date:   Fri Jun 6 16:25:52 2025 +0000
+
+    stuck in playRound function
+
+[33mcommit dfba700384f182e6f81bfd2701745a5aa00f2dbd[m
+Author: kaity6 <202271975+Kaity6@users.noreply.github.com>
+Date:   Thu Jun 5 15:43:51 2025 +0000
+
+    getplayerfunction done as well
+
+[33mcommit fe49e8702d005533a854827fe98aa16678161258[m
+Author: kaity6 <202271975+Kaity6@users.noreply.github.com>
+Date:   Thu Jun 5 15:28:37 2025 +0000
+
+    getcomputer function done
+
+[33mcommit 2b227639e780b47be16b39752fa2e4621601a41b[m
+Author: Kaity6 <202271975+Kaity6@users.noreply.github.com>
+Date:   Wed Jun 4 17:43:22 2025 +0000
+
+    Initial commit
